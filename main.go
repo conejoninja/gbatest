@@ -48,9 +48,10 @@ func update(interrupt.Interrupt) {
 	tinyfont.WriteLine(display, &fonts.Bold9pt7b, 68, 130, []byte("FOSDEM '20"), color.RGBA{10, 30, 30, 255})
 
 	krgb++
-	if krgb >= 30 {
+	krgb = krgb%30
+	/*if krgb >= 30 {
 		krgb = 0
-	}
+	} */
 	if krgb%2 == 0 {
 		tinyfont.DrawChar(display, &fonts.Regular58pt, 14, 140, byte('N'), color.RGBA{0, 0, 0, 255})
 		tinyfont.DrawChar(display, &fonts.Regular58pt, 200, 140, byte('G'), color.RGBA{0, 0, 0, 255})
