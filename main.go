@@ -12,7 +12,7 @@ import (
 	"tinygo.org/x/tinydraw"
 
 	"github.com/conejoninja/gbatest/fonts"
-	"github.com/conejoninja/tinyfont"
+	"tinygo.org/x/tinyfont"
 )
 
 var display = machine.Display
